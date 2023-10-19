@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+  background-color: aliceblue;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+}
+
+.App {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+}
+
+.title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 3px solid black;
+  background-color: white;
+  width: 100vw;
+}
+
+.allBooks{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 100px;
+  background-color: white;
+  margin: 30px;
+  border: 3px solid black;
+  background-color: lightgray;
+  height: 300px;
+  overflow-y:scroll;
+}
+
+.bookBox{
+  position: relative;
+  top: 425px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid black;
+  margin: 20px;
+  padding: 10px;
+  width: 400px;
+  flex-wrap: wrap;
+  background-color: white;
+  border-radius: 5%;
+  box-shadow: 4px 8px;
+}
+
+button{
+  background-color: white;
+  padding: 5px;
+  font-size: 15px;
+  border-radius: 10%;
+  transition: 0.5s;
+}
+
+button:hover{
+  cursor: pointer;
+  background-color: cyan;
+}
+
+.formCard{
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+.welcomeBox{
+  padding: 30px;
+  font-size: 20px;
+  background-color: white;
+  border: 3px solid black;
+  margin-top: 18vh;
+  margin-bottom: 37.4%;
+}
+
+.bookForm{
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: white;
+}
+
+input{
+  width: 175px;
+  height: 30px;
+}
+
+.submitBtn{
+  margin: 0px 5px;
+  height: 30px;
+}
+
+.modal{
+  position: fixed;
+  width: 100vw;
+  height: 500%;
+  background-color: rgba(128, 128, 128, 0.458);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalCard{
+  padding: 20px 150px;
+  background-color: white;
+  border: 3px solid black;
+}
+
+@media only screen and (max-width: 1300px) {
+  .formCard{
+    flex-direction: column;
+    align-items: center;
+    justify-content: unset;
+    background-color: grey;
+    border: 3px solid black;
+    width: 600px;
+    padding: 20px 0px;
+    margin-bottom: 7vh;
+    }
+
+  .bookForm{
+    padding: 10px;
+    min-width: 350px;
+    margin: 10px;
+    border: 2px solid black;
+  }
+  .modalCard{
+    position: relative;
+    top: -4%;
+    padding: 20px 50px;
+  }
+}
