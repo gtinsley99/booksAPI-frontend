@@ -1,6 +1,6 @@
 export const Booksapi = async (setBookList) => {
       try {
-        const res = await fetch("http://localhost:5001/books/listAllBooks");
+        const res = await fetch(`${process.env.REACT_APP_API}/books/listAllBooks`);
         if (!res.ok) {
           throw new Error(res.statusText);
         }
@@ -14,7 +14,7 @@ export const Booksapi = async (setBookList) => {
 
 export const AddBookapi = async (addTitle, addAuthor, addGenre, setErrors) => {
     try {
-      const res = await fetch("http://localhost:5001/books/addaBook", {
+      const res = await fetch(`${process.env.REACT_APP_API}/books/addaBook`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -36,7 +36,7 @@ export const AddBookapi = async (addTitle, addAuthor, addGenre, setErrors) => {
 export const DeleteBookapi = async (delTitle, setErrors) => {
     try {
       const res = await fetch(
-        "http://localhost:5001/books/deleteaBookByTitle",
+        `${process.env.REACT_APP_API}/books/deleteaBookByTitle`,
         {
           method: "DELETE",
           headers: { "Content-Type": "application/json" },
@@ -58,7 +58,7 @@ export const DeleteBookapi = async (delTitle, setErrors) => {
 export const UpdateBookapi = async (updTitle, updAuthor, updGenre, setErrors) => {
     try {
       const res = await fetch(
-        "http://localhost:5001/books/updateaBookByTitle",
+        `${process.env.REACT_APP_API}/books/updateaBookByTitle`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
